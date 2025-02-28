@@ -14,6 +14,7 @@ export PATH=/opt/Qt5.14.2/5.14.2/gcc_64/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=~/bin:$PATH
+export PATH=/snap/bin:$PATH
 
 ## set colors for LS_COLORS
 eval `dircolors ~/.dircolors`
@@ -137,3 +138,21 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="/home/simon/.local/share/fnm:$PATH"
   eval "`fnm env`"
 fi
+
+alias ld='eza -lD --icons --git -a'
+alias lf='eza -lF --color=always | grep -v /'
+alias lh='eza -dl .* --group-directories-first'
+alias ll='eza -al --group-directories-first'
+# alias ls='eza -alF --color=always --sort=size | grep -v /'
+# alias lt='eza -al --sort=modified'
+# Eza
+alias l="eza -l --icons --git -a"
+alias lt="eza --tree --level=2 --long --icons --git"
+alias ltree="eza --tree --level=2  --icons --git"
+
+# Enable hidden files completion
+_comp_options+=(globdots)
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"
