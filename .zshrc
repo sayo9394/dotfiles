@@ -96,7 +96,7 @@ export LIBGL_ALWAYS_SOFTWARE=1
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -152,7 +152,3 @@ alias ltree="eza --tree --level=2  --icons --git"
 
 # Enable hidden files completion
 _comp_options+=(globdots)
-
-. "$HOME/.atuin/bin/env"
-
-eval "$(atuin init zsh)"
