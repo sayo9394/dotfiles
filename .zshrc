@@ -17,7 +17,7 @@ export PATH=~/bin:$PATH
 export PATH=/snap/bin:$PATH
 
 ## set colors for LS_COLORS
-eval `dircolors ~/.dircolors`
+# eval `dircolors ~/.dircolors`
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -120,7 +120,7 @@ alias vim=nvim
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-eval "$(gh copilot alias -- zsh)"
+# eval "$(gh copilot alias -- zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -129,6 +129,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(zoxide init --cmd cd zsh)"
+export PATH="/home/torus/.local/bin:$PATH"
 
 export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --info=inline --border --margin=1 --padding=1"
 
